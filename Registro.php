@@ -48,7 +48,7 @@
     <div class="container"> 
     	<div class="well">
         	<!--Formulario-->
-			<form class="form-horizontal">
+			<form class="form-horizontal" action="MisEventos.php">
               <fieldset>
                   <legend>Registro</legend>
                   <!--Nombre-->
@@ -63,7 +63,7 @@
                   <div class="form-group">
                       <label for="Email" class="col-lg-2 control-label">Email</label>
                       <div class="col-lg-10">
-                          <input class="form-control" NAME="email" placeholder="Email" type="text">
+                          <input class="form-control" NAME="Email" placeholder="Email" type="text">
                       </div>
                   </div>
                   
