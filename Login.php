@@ -32,13 +32,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#about">¿Que es el Despilfarro?</a></li>
-            <li><a href="#contact">¿Quienes somos?</a></li>            
+            <li><a href="Index.htm">Inicio</a></li>
+            <li><a href="Que es.html">¿Que es el Despilfarro?</a></li>
+            <li><a href="Quienes Somos.html">¿Quienes somos?</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Inicio de Sesion</a></li>
-            <li><a href="#">Registro</a></li>
+            <li class="active"><a href="Login.php">Inicio de Sesion</a></li>
+            <li><a href="Registro.php">Registro</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

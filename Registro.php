@@ -28,17 +28,18 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container"><img class="navbar-brand" src="img/images.jpg" ></img>
         <div class="navbar-header">
-          	<a class="navbar-brand">El Despilfarro</a>
+          	<a class="navbar-brand">MEating</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#about">¿Que es el Despilfarro?</a></li>
-            <li><a href="#contact">¿Quienes somos?</a></li>            
+            <li><a href="Index.htm">Inicio</a></li>
+            <li><a href="Que es.html">¿Que es MEating?</a></li>
+            <li><a href="Quienes Somos.html">¿Quienes somos?</a></li> 
+            <li><a href="Contacto.php">Contacto</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Inicio de Sesion</a></li>
-            <li class="active"><a href="#">Registro</a></li>
+            <li><a href="Index.htm">Inicio de Sesion</a></li>
+            <li class="active"><a href="Registro.php">Registro</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -54,15 +55,15 @@
                   <div class="form-group">
                       <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
                       <div class="col-lg-10">
-                          <input class="form-control" id="inputNombre" placeholder="Nombre" type="text">
+                          <input class="form-control" Name="Nombre" placeholder="Nombre" type="text">
                       </div>
                   </div>
                   
                   <!--Mail-->
                   <div class="form-group">
-                      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                      <label for="Email" class="col-lg-2 control-label">Email</label>
                       <div class="col-lg-10">
-                          <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                          <input class="form-control" NAME="email" placeholder="Email" type="text">
                       </div>
                   </div>
                   
@@ -70,40 +71,50 @@
                   <div class="form-group">
                       <label for="select" class="col-lg-2 control-label">Provincia</label>
                       <div class="col-lg-10">
-                          <select class="form-control" id="select">
-            <option>Buenos Aires</option>
-            <option>Catamarca</option>
-            <option>Chaco</option>
-            <option>Chubut</option>
-            <option>Córdoba</option>
-            <option>Corrientes</option>
-            <option>Distrito Federal</option>
-            <option>Entre Ríos</option>
-            <option>Formosa</option>
-            <option>Jujuy</option>
-            <option>La Pampa</option>
-            <option>La Rioja</option>
-            <option>Mendoza</option>
-            <option>Misiones</option>
-            <option>Neuquén</option>
-            <option>Río Negro</option>
-            <option>Salta</option>
-            <option>San Juan</option>
-            <option>San Luis</option>
-            <option>Santa Cruz</option>
-            <option>Santa Fe</option>
-            <option>Santiago del Estero</option>
-            <option>Tierra del Fuego</option>
-            <option>Tucumán</option>
-          </select>
+                          <select class="form-control" name="Provincia">
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Corrientes">Corrientes</option>
+                            <option value="Distrito Federal">Distrito Federal</option>
+                            <option value="Entre Ríos">Entre Ríos</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquén">Neuquén</option>
+                            <option value="Río Negro">Río Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Santiago del Estero">Santiago del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucumán">Tucumán</option>
+         				 </select>
                       </div>     
+                  </div>
+                  
+                  <!--Ciudad-->
+                  <div class="form-group">
+                      <label for="Ciudad" class="col-lg-2 control-label">Ciudad</label>
+                      <div class="col-lg-10">
+                          <input class="form-control" Name="Ciudad" placeholder="Ciudad" type="text">
+                      </div>
                   </div>
                   
                   <!--Textarea-->
                   <div class="form-group">
                       <label for="textArea" class="col-lg-2 control-label"></label>
-                      <div class="col-lg-10">
-                          <textarea class="form-control" rows="5" id="textArea"></textarea>
+                      	<div class="col-lg-10">
+                              <textarea class="form-control" rows="5" readonly="readonly">La utilización de nuestro sitio implica su aceptación plena y sinreservas a todas y cada una de las disposiciones incluidas en este Aviso Legal, por lo que si usted no está de acuerdo con cualquiera de las condiciones aquí establecidas, no deberá usar u/o acceder a este sitio.
+ Reservamos el derecho a modificar esta Declaración de Privacidad en cualquier momento. Su uso continuo de cualquier porción de este sitio tras la notificación o anuncio de tales modificaciones constituirá su aceptación de tales cambios
+    							</textarea>
                       </div>
                    </div>                   
                   <!--CheckBox-->                  
@@ -115,8 +126,7 @@
        			<!--Botones-->
                   <div class="form-group">
                       <div class="col-lg-10 col-lg-offset-2">
-                          <button class="btn btn-default">Cancelar</button>
-                          <button type="submit" class="btn btn-primary">Aceptar</button>
+                          <button type="submit" class="btn btn-primary">Enviar</button>
                       </div>
                   </div>
               </fieldset>
