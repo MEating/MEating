@@ -28,17 +28,19 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container"><img class="navbar-brand" src="img/images.jpg" ></img>
         <div class="navbar-header">
-          	<p class="navbar-brand">El Despilfarro</p>
+          	<p class="navbar-brand">Meating</p>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Index.htm">Inicio</a></li>
-            <li><a href="Que es.html">¿Que es el Despilfarro?</a></li>
-            <li><a href="Quienes Somos.html">¿Quienes somos?</a></li>            
+            <li><a href="../programacion/index.html">Inicio</a></li>
+            <li><a href="../programacion/que es.html">¿Que Meating?</a></li>
+            <li><a href="../programacion/Quienes Somos.html">¿Quienes somos?</a></li> 
+			<li><a href="../programacion/contacto.php">Contacto</a></li> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="Login.php">Inicio de Sesion</a></li>
-            <li><a href="Registro.php">Registro</a></li>
+            <li class="active"><a href="#">Inicio de Sesion</a></li>
+			<li><a href="../programacion/registro.php">Registrarse</a></li>
+            
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -51,18 +53,18 @@
         <legend>Inicio de Sesion</legend>
         <div class="form-group">
           <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-          <div class="col-lg-10">
+          <div class="col-lg-4">
             <input class="form-control" id="inputEmail" placeholder="Email" type="text">
           </div>
         </div>
         <div class="form-group">
           <label for="inputPassword" class="col-lg-2 control-label">Password</label>
-          <div class="col-lg-10">
+          <div class="col-lg-4">
             <input class="form-control" id="inputPassword" placeholder="Password" type="password">
           </div>
         </div>
         <div class="form-group">
-          <div class="col-lg-10 col-lg-offset-2">
+          <div class="col-lg-4 col-lg-offset-2">
             <button type="submit" class="btn btn-primary">Aceptar</button>
           </div>
         </div>
@@ -82,4 +84,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
+  
+  
 </html>
