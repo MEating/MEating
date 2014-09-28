@@ -48,8 +48,8 @@
 <?php
 	$Nombre=$_REQUEST['Nombre'];
 	$Email=$_REQUEST['Email'];
-	$FechaNacimiento="12-12-1299";
-	$Sexo="Femenino";
+	$FechaNacimiento="1990-05-21";
+	$Sexo="Masculino";
 	$Provincia=$_REQUEST['Provincia'];
 	$Ciudad=$_REQUEST['Ciudad'];
 	
@@ -66,9 +66,10 @@
 	$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad')";
 	$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
 	
-	// Cerrar conexión
-   mysql_close ($conexion);  
-?>     	
+ 
+?>     		
+			<h1 id="type"> Mis Eventos</h1>
+
         </div>
 	</div>
 </body>
