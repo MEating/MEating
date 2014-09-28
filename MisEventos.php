@@ -46,12 +46,13 @@
     </div>
     <!--le da el cuerpo al body (valga la redundancia)--> <!--modificado en el css box-shadow-->
 <?php
-	$Nombre=$_REQUEST['Nombre'];
-	$Email=$_REQUEST['Email'];
-	$FechaNacimiento="1990-05-21";
-	$Sexo="Masculino";
-	$Provincia=$_REQUEST['Provincia'];
-	$Ciudad=$_REQUEST['Ciudad'];
+	@$Nombre=$_REQUEST['Nombre'];
+	@$Email=$_REQUEST['Email'];
+	@$FechaNacimiento="1990-05-21";
+	@$Sexo="Masculino";
+	@$Provincia=$_REQUEST['Provincia'];
+	@$Ciudad=$_REQUEST['Ciudad'];
+	@$Password="12345";
 	
 ?>
     <div class="container"> 
@@ -63,12 +64,40 @@
 	mysql_select_db("meating") or die("no se puede conectar con usuarios");
 	
 	//enviar consulta
-	$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad')";
+	$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad, Password ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad','$Password')";
 	$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
 	
+	// Cerrar conexión
+   	mysql_close ($conexion);
  
 ?>     		
-			<h1 id="type"> Mis Eventos</h1>
+			<h1 id="type"> Mis Eventos</h1><div><a href="#" class="btn btn-primary">Agregar Evento +</a></div>
+            <table class="table table-striped table-hover ">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nombre</th>
+                  <th>Lugar</th>
+                  <th>Fecha</th>
+                  <th>Organizador</th>
+                  <th>invitados/confirmados</th>
+                </tr>
+              </thead>
+              <tbody>    
+                <tr class="info">
+                  <td>3</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+                <tr class="active">
+                  <td>7</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                  <td>Column content</td>
+                </tr>
+              </tbody>
+            </table> 
 
         </div>
 	</div>
