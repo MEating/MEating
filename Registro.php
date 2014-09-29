@@ -19,31 +19,14 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/jquery2-0-0.min.js"></script>
-     <script type="text/javascript" language="javascript" src="../js/validaForm.js"></script>
+  
+    
      
-   <style type="text/css">
-   .errores{
-            -webkit-boxshadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            background: red;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            color: #fff;
-            display: none;
-            font-size: 14px;
-            margin-top: -50px;
-            margin-left: 180px;
-            padding: 10px;
-            position: absolute;
-        }
-   </style>
-</head>
+  </head>
 <body>
-  	<!--barra de menu-->
+    <!--barra de menu-->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container"><img class="navbar-brand" src="img/images.jpg" ></img>
         <div class="navbar-header">
@@ -63,10 +46,10 @@
       </div>
     </div>
     <!--le da el cuerpo al body (valga la redundancia)--> <!--modificado en el css box-shadow-->
-    <div class="container"> 
+    <div class="container" > 
     	<div class="well">
         	<!--Formulario-->
-			<form class="form-horizontal" placeholder=".col-xs-3" onsubmit="return valida();" name="contacto" >
+			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
               <fieldset>
                   <legend>Registro</legend>
                   <!--Nombre-->
@@ -74,55 +57,62 @@
                       <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
                       <div class="col-lg-5">
                           <input class="form-control" id="inputNombre" placeholder="Nombre" type="text" name="nombre">
-                           <div id="mensaje1" class="errores"> Dame tu nombre</div>
-                      </div>
+                           
+                    </div>
                   </div>
-                  
-                  <!-- Apellido -->
-                  <div class="form-group">
-                      <label for="inputApellido" class="col-lg-2 control-label">Apellido</label>
-                      <div class="col-lg-5">
-                          <input class="form-control" id="inputApellido" placeholder="Apellido" type="text">
-                      </div>
-                  </div>
-
-                 <!--Mail-->
+                                   
+                <!--Mail-->
                   <div class="form-group">
                       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                       <div class="col-lg-5">
-                          <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+                          <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="mail">
                       </div>
                   </div>
-                  <!--Fecha de Nacimiento-->                  
-<div class="form-group">
-                      <label for="inputNombre" class="col-lg-2 control-label">Fecha de Nacimiento</label>
-                      <div class="col-lg-5">
-                          <input class="form-control" id="inputNombre" placeholder="Nombre" type="date" >
-                      </div>
-                  </div>
-                  <!--Sexo-->  
-                 <div class="form-group">
-      <label class="col-lg-2 control-label">Sexo</label>
+                  <!-- Contraseña -->
+                  
+                   <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Contraseña</label>
       <div class="col-lg-10">
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-           Femenino
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-            Masculino
-          </label>
-        </div>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Introduzca una contraseña" name="contraseña1">
+        
       </div>
     </div>
-              	<!--Provincias-->
-                  <div class="form-group">
-                      <label for="select" class="col-lg-2 control-label">Provincia</label>
+    
+    <!--confirmacion password-->
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Confirmar Contraseña</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" id="confirmPassword" placeholder="Vuelva a ingresar la contraseña" name="contraseña2">
+        
+      </div>
+    </div>
+                  
+                <!--Fecha de Nacimiento-->                  
+<div class="form-group">
+                      <label for="inputFecha" class="col-lg-2 control-label">Fecha de Nacimiento</label>
                       <div class="col-lg-5">
-                          <select class="form-control" id="select">
+                          <input class="form-control" id="dateFecha" placeholder="Nombre" type="date" >
+                      </div>
+                  </div>
+                  <!--Sexo-->
+                  <div class="form-group">
+            <label class="col-lg-2 control-label">Sexo:</label>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                  <input type="radio" name="genderRadios" value="male"> Masculino
+                </label>
+            </div>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                  <input type="radio" name="genderRadios" value="female"> Femenino
+                </label>
+            </div>
+        </div>
+                  <!--Provincias-->
+                  <div class="form-group">
+                      <label for="selectProvincia" class="col-lg-2 control-label">Provincia</label>
+                      <div class="col-lg-5">
+                          <select class="form-control" id="selectProvincia">
             <option>Buenos Aires</option>
             <option>Catamarca</option>
             <option>Chaco</option>
@@ -152,9 +142,9 @@
                   </div>
                <!--Ciudad--> 
                 <div class="form-group">
-                      <label for="inputNombre" class="col-lg-2 control-label">Ciudad</label>
+                      <label for="inputCiudad" class="col-lg-2 control-label">Ciudad</label>
                       <div class="col-lg-5">
-                          <input class="form-control" id="inputNombre" placeholder="Nombre" type="text">
+                          <input class="form-control" id="inputCiudad" placeholder="Nombre" type="text" name="ciudad">
                       </div>
                   </div>
 
@@ -178,23 +168,35 @@
                 </div>
                   
                   <!--CheckBox-->
-                  <div class="checkbox">
-                      <input type="checkbox" name="check">
-                      <label for="check" class="label">Acepto condiciones Legales</label>
+                  
+                  <div class="checkbox-inline">
+                    <label class="checkbox">  <input type="checkbox" name="check" id="condiciones">
+                      Acepto condiciones Legales</label>
                       
-                  </div>
+                      
+                </div>
                   
        			<!--Botones-->
                   <div class="form-group">
-                      <div class="col-lg-10 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-2">
                      
-                          <button type="submit" class="btn-primary" >Aceptar</button>
-                          <button class="btn-default" type="reset" id="btnCancelar">Cancelar</button>
+                      <button type="submit" class="btn-primary" value="submit" id="btnAceptar" name="acepta">Aceptar</button>
+                          <button class="btn-default" type="reset" value="reset" id="btnCancelar">Cancelar</button>
                       </div>
                   </div>
               </fieldset>
 			</form>
         </div>
 	</div>
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<!--    <script type="text/javascript" language="javascript" src="js/validaForm.js"></script>
+-->		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.js"></script>
+<script src="js/probando.js"></script>
+
 </body>
 </html>
