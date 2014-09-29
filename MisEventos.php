@@ -32,14 +32,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="Index.htm">Inicio</a></li>
+            <li><a href="Index.html">Inicio</a></li>
             <li><a href="Que es.html">¿Que es MEating?</a></li>
             <li><a href="Quienes Somos.html">¿Quienes somos?</a></li> 
             <li><a href="Contacto.php">Contacto</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="Index.htm">Inicio de Sesion</a></li>
-            <li><a href="Registro.php">Registro</a></li>
+            <li><a href="#">Finalizar Sesion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,6 +56,10 @@
 ?>
     <div class="container"> 
     	<div class="well"> 
+	        <div><h1 id="type"> Mis Eventos</h1></div>
+            <div align="right"><a href="Evento.php" class="btn btn-primary" >Agregar Evento +</a></div><br>
+		
+
 <?php	
 	$conexion= mysql_connect("localhost","root","") or die ("no se puede conectar con la base de datos");
 
@@ -67,39 +70,77 @@
 	$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad, Password ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad','$Password')";
 	$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
 	
+	//pidiendo datos para mis eventos
+	$instruccion= "select * from evento";
+	$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
+	
+	
+	$nfilas = mysql_num_rows($consulta);
+      if ($nfilas > 0)
+      {
+         print ("<table class='table table-striped table-hover'>\n");
+         print ("<thead>\n");
+		 print ("<TR>\n");
+         print ("<TH>Nombre</TH>\n");
+         print ("<TH>Lugar</TH>\n");
+         print ("<TH>Fecha</TH>\n");
+         print ("<TH>Organizador</TH>\n");
+         print ("<TH>invitados/Confirmados</TH>\n");
+         print ("</TR>\n");
+		 print ("</thead>\n");
+		 print ("<tbody>\n");
+
+         for ($i=0; $i<$nfilas; $i++)
+         {
+			if (($i%2)==0)
+			{
+				$resultado = mysql_fetch_array ($consulta);
+				print ("<TR class='info'>\n");
+				print ("<TD>" . $resultado['NombreEvento'] . "</TD>\n");
+				print ("<TD>" . $resultado['Lugar'] . "</TD>\n");
+				print ("<TD>" . $resultado['FechaYHora'] . "</TD>\n");
+				print ("<TD>" . $resultado['Organizador'] . "</TD>\n");
+				print ("<TD>12/12</TD>\n"); //invitados confirmados falta la cuenta 
+				print ("</TR>\n");
+			}
+			else
+			{
+				$resultado = mysql_fetch_array ($consulta);
+				print ("<TR class='active'>\n");
+				print ("<TD>" . $resultado['NombreEvento'] . "</TD>\n");
+				print ("<TD>" . $resultado['Lugar'] . "</TD>\n");
+				print ("<TD>" . $resultado['FechaYHora'] . "</TD>\n");
+				print ("<TD>" . $resultado['Organizador'] . "</TD>\n");
+				print ("<TD>12/12</TD>\n"); //invitados confirmados falta la cuenta 
+				print ("</TR>\n");
+			}
+         }
+		 print ("<tbody>\n");
+         print ("</TABLE>\n");
+      }
+      else
+         print ("No hay eventos disponibles");
+		 
+		 
 	// Cerrar conexión
    	mysql_close ($conexion);
  
-?>     		
-			<h1 id="type"> Mis Eventos</h1><div><a href="#" class="btn btn-primary">Agregar Evento +</a></div>
-            <table class="table table-striped table-hover ">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nombre</th>
-                  <th>Lugar</th>
-                  <th>Fecha</th>
-                  <th>Organizador</th>
-                  <th>invitados/confirmados</th>
-                </tr>
-              </thead>
-              <tbody>    
-                <tr class="info">
-                  <td>3</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-                <tr class="active">
-                  <td>7</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                  <td>Column content</td>
-                </tr>
-              </tbody>
-            </table> 
-
+?>    
         </div>
 	</div>
 </body>
+<div id="footer">
+		<!-- FOOTER -->
+        <footer id="mainFooter">
+            <div class="wrapped" align="center"> <!Anclamos un footer abajo del todo de la pagina>
+                <p class="pull-right"><a id="goTop" href="#"><h3> ^ </h3></a></p> <!con ese icono nos lleva hacia arriba de la pagina>
+                <p>© 2014 MEating   ·  <a href="ruta de privacidad y terminos">Privacidad y Términos</a> · Seguinos en <!no va a llevar a los links mencionados abajo a traves de los iconos-imagenes>
+                	<a href="http://facebook.com"><img src="img/f2.png" height='30' width='70'></a>, 
+					<a href="http://twitter.com"><img src="img/t1.png" height='30' width='70'></a> y 
+					<a href="http://plus.google.com/share"><img src="img/g1.png" height='30' width='70'></a>.
+					
+                </p>
+            </div>
+        </footer>
+ </div>
 </html>
