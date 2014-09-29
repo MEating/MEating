@@ -61,14 +61,18 @@
 		
 
 <?php	
-	$conexion= mysql_connect("localhost","root","") or die ("no se puede conectar con la base de datos");
-
-	//Selecciono la base de datos
-	mysql_select_db("meating") or die("no se puede conectar con usuarios");
 	
-	//enviar consulta
-	$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad, Password ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad','$Password')";
-	$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
+		$conexion= mysql_connect("localhost","root","") or die ("no se puede conectar con la base de datos");
+	
+		//Selecciono la base de datos
+		mysql_select_db("meating") or die("no se puede conectar con usuarios");
+		
+		if ($Nombre!="" and $Email!="" and $FechaNacimiento!="" and $Sexo!="" and $Provincia!="" and $Ciudad!="" and $Password!="")
+	{
+		//enviar consulta
+		$instruccion = "insert into usuarios(Nombre, Email,FechaNacimiento, Sexo, Provincia, Ciudad, Password ) values ('$Nombre','$Email','$FechaNacimiento','$Sexo','$Provincia','$Ciudad','$Password')";
+		$consulta = mysql_query ($instruccion, $conexion) or die("falló consulta");
+	}
 	
 	//pidiendo datos para mis eventos
 	$instruccion= "select * from evento";

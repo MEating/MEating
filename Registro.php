@@ -49,7 +49,7 @@
     <div class="container" > 
     	<div class="well">
         	<!--Formulario-->
-			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
+			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="MisEventos.php" method="post" >
               <fieldset>
                   <legend>Registro</legend>
                   <!--Nombre-->
@@ -99,12 +99,12 @@
             <label class="col-lg-2 control-label">Sexo:</label>
             <div class="col-xs-2">
                 <label class="radio-inline">
-                  <input type="radio" name="genderRadios" value="male"> Masculino
+                  <input type="radio" name="Sexo" value="male"> Masculino
                 </label>
             </div>
             <div class="col-xs-2">
                 <label class="radio-inline">
-                  <input type="radio" name="genderRadios" value="female"> Femenino
+                  <input type="radio" name="Sexo" value="female"> Femenino
                 </label>
             </div>
         </div>
