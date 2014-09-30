@@ -41,17 +41,15 @@
     <!--le da el cuerpo al body (valga la redundancia)--> <!--modificado en el css box-shadow-->
     <div class="container" > 
     	<div class="well">
-<<<<<<< HEAD
        	<!--Formulario-->
-           <form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
+           <!--<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
              <fieldset>
                <legend>Registro</legend>
                 <!--Nombre-->
-                <div class="form-group">
+              <!--  <div class="form-group">
                   <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
                   <div class="col-lg-5">
-                    <input class="form-control" id="inputNombre" placeholder="Nombre de usuario" type="text" name="nombre">
-=======
+                    <input class="form-control" id="inputNombre" placeholder="Nombre de usuario" type="text" name="nombre">-->
         	<!--Formulario-->
 			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="MisEventos.php" method="post" >
               <fieldset>
@@ -66,15 +64,7 @@
                   </div>
                                    
                 <!--Mail-->
-                  <div class="form-group">
-                      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-                      <div class="col-lg-5">
-                          <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="mail">
-                      </div>
->>>>>>> f94e11f941c9f093f5a64626eaa839593c5d67cc
-                  </div>
-                </div>
-               <!--Mail-->
+                  
                 <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-5">
@@ -96,27 +86,20 @@
       				</div>
  			    </div>
                 <!--Fecha de Nacimiento-->                  
-<<<<<<< HEAD
+
 				<div class="form-group">
                     <label for="inputFecha" class="col-lg-2 control-label">Fecha de Nacimiento</label>
                     <div class="col-lg-5">
                         <input class="form-control" id="dateFecha" type="date" name="nacimiento" >
                     </div>
                 </div>
-                <!--Sexo-->
-=======
-<div class="form-group">
-                      <label for="inputFecha" class="col-lg-2 control-label">Fecha de Nacimiento</label>
-                      <div class="col-lg-5">
-                          <input class="form-control" id="dateFecha" placeholder="Nombre" type="date" >
-                      </div>
-                  </div>
+               
                   <!--Sexo-->
-                  <div class="form-group">
+                <div class="form-group">
             <label class="col-lg-2 control-label">Sexo:</label>
             <div class="col-xs-2">
                 <label class="radio-inline">
-                  <input type="radio" name="Sexo" value="male"> Masculino
+                  <input type="radio" name="Sexo" value="male" checked="checked"> Masculino
                 </label>
             </div>
             <div class="col-xs-2">
@@ -125,54 +108,7 @@
                 </label>
             </div>
         </div>
-                  <!--Provincias-->
-                  <div class="form-group">
-                      <label for="selectProvincia" class="col-lg-2 control-label">Provincia</label>
-                      <div class="col-lg-5">
-                          <select class="form-control" id="selectProvincia">
-            <option>Buenos Aires</option>
-            <option>Catamarca</option>
-            <option>Chaco</option>
-            <option>Chubut</option>
-            <option>Córdoba</option>
-            <option>Corrientes</option>
-            <option>Distrito Federal</option>
-            <option>Entre Ríos</option>
-            <option>Formosa</option>
-            <option>Jujuy</option>
-            <option>La Pampa</option>
-            <option>La Rioja</option>
-            <option>Mendoza</option>
-            <option>Misiones</option>
-            <option>Neuquén</option>
-            <option>Río Negro</option>
-            <option>Salta</option>
-            <option>San Juan</option>
-            <option>San Luis</option>
-            <option>Santa Cruz</option>
-            <option>Santa Fe</option>
-            <option>Santiago del Estero</option>
-            <option>Tierra del Fuego</option>
-            <option>Tucumán</option>
-          </select>
-                      </div>     
-                  </div>
-               <!--Ciudad--> 
->>>>>>> f94e11f941c9f093f5a64626eaa839593c5d67cc
-                <div class="form-group">
-                    <label class="col-lg-2 control-label">Sexo:</label>
-                    <div class="col-xs-2">
-                        <label class="radio-inline">
-                          <input type="radio" name="genderRadios" value="male" checked="checked"> Masculino
-                        </label>
-                    </div>
-                    <div>
-                        <label class="radio-inline">
-                          <input type="radio" name="genderRadios" value="female"> Femenino
-                        </label>
-                    </div>
-     			 </div>
-                <!--Provincias-->
+                 <!--Provincias-->
                 <div class="form-group">
                     <label for="selectProvincia" class="col-lg-2 control-label">Provincia</label>
                     <div class="col-lg-5">
@@ -239,11 +175,12 @@
                   <div class="col-lg-10 col-lg-offset-2 f">
                      <button type="submit" class="btn-primary" value="submit" id="btnAceptar" name="acepta">Aceptar</button>
                      <button class="btn-default" type="reset" value="reset" id="btnCancelar" name="cancelar">Cancelar</button>
-                   </div>
+                  </div>
                 </div>
             </fieldset>
           </form>
         </div>
+        
 	</div>
       <!-- Bootstrap core JavaScript
     ================================================== -->
