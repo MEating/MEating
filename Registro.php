@@ -41,6 +41,7 @@
     <!--le da el cuerpo al body (valga la redundancia)--> <!--modificado en el css box-shadow-->
     <div class="container" > 
     	<div class="well">
+<<<<<<< HEAD
        	<!--Formulario-->
            <form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
              <fieldset>
@@ -50,6 +51,27 @@
                   <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
                   <div class="col-lg-5">
                     <input class="form-control" id="inputNombre" placeholder="Nombre de usuario" type="text" name="nombre">
+=======
+        	<!--Formulario-->
+			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="MisEventos.php" method="post" >
+              <fieldset>
+                  <legend>Registro</legend>
+                  <!--Nombre-->
+                  <div class="form-group">
+                      <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+                      <div class="col-lg-5">
+                          <input class="form-control" id="inputNombre" placeholder="Nombre" type="text" name="nombre">
+                           
+                    </div>
+                  </div>
+                                   
+                <!--Mail-->
+                  <div class="form-group">
+                      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                      <div class="col-lg-5">
+                          <input class="form-control" id="inputEmail" placeholder="Email" type="email" name="mail">
+                      </div>
+>>>>>>> f94e11f941c9f093f5a64626eaa839593c5d67cc
                   </div>
                 </div>
                <!--Mail-->
@@ -74,6 +96,7 @@
       				</div>
  			    </div>
                 <!--Fecha de Nacimiento-->                  
+<<<<<<< HEAD
 				<div class="form-group">
                     <label for="inputFecha" class="col-lg-2 control-label">Fecha de Nacimiento</label>
                     <div class="col-lg-5">
@@ -81,6 +104,61 @@
                     </div>
                 </div>
                 <!--Sexo-->
+=======
+<div class="form-group">
+                      <label for="inputFecha" class="col-lg-2 control-label">Fecha de Nacimiento</label>
+                      <div class="col-lg-5">
+                          <input class="form-control" id="dateFecha" placeholder="Nombre" type="date" >
+                      </div>
+                  </div>
+                  <!--Sexo-->
+                  <div class="form-group">
+            <label class="col-lg-2 control-label">Sexo:</label>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                  <input type="radio" name="Sexo" value="male"> Masculino
+                </label>
+            </div>
+            <div class="col-xs-2">
+                <label class="radio-inline">
+                  <input type="radio" name="Sexo" value="female"> Femenino
+                </label>
+            </div>
+        </div>
+                  <!--Provincias-->
+                  <div class="form-group">
+                      <label for="selectProvincia" class="col-lg-2 control-label">Provincia</label>
+                      <div class="col-lg-5">
+                          <select class="form-control" id="selectProvincia">
+            <option>Buenos Aires</option>
+            <option>Catamarca</option>
+            <option>Chaco</option>
+            <option>Chubut</option>
+            <option>Córdoba</option>
+            <option>Corrientes</option>
+            <option>Distrito Federal</option>
+            <option>Entre Ríos</option>
+            <option>Formosa</option>
+            <option>Jujuy</option>
+            <option>La Pampa</option>
+            <option>La Rioja</option>
+            <option>Mendoza</option>
+            <option>Misiones</option>
+            <option>Neuquén</option>
+            <option>Río Negro</option>
+            <option>Salta</option>
+            <option>San Juan</option>
+            <option>San Luis</option>
+            <option>Santa Cruz</option>
+            <option>Santa Fe</option>
+            <option>Santiago del Estero</option>
+            <option>Tierra del Fuego</option>
+            <option>Tucumán</option>
+          </select>
+                      </div>     
+                  </div>
+               <!--Ciudad--> 
+>>>>>>> f94e11f941c9f093f5a64626eaa839593c5d67cc
                 <div class="form-group">
                     <label class="col-lg-2 control-label">Sexo:</label>
                     <div class="col-xs-2">
