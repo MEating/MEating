@@ -29,12 +29,14 @@
       </div>
 <div class="container">
 	<div class="well">
-		<div class="form-group">
+		<form class="form-horizontal">
+        <div class="form-group">
       		<label for="inputNombreEvento" class="col-lg-2 control-label">Nombre del Evento</label>
       		<div class="col-lg-10">
         		<input class="form-control" id="inputNombreEvento" placeholder="Nombre del Evento" type="text">
       		</div>
    		 </div>
+         </form>
     </div>
 </div>
 

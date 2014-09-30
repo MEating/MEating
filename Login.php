@@ -33,13 +33,13 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="../MEating/index.html">Inicio</a></li>
-            <li><a href="../MEating/que es.html">¿Que Meating?</a></li>
+            <li><a href="../MEating/que es.html">¿Que es Meating?</a></li>
             <li><a href="../MEating/Quienes Somos.html">¿Quienes somos?</a></li> 
 			<li><a href="../MEating/contacto.php">Contacto</a></li> 
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">Inicio de Sesion</a></li>
-			<li><a href="../]MEating/registro.php">Registrarse</a></li>
+			<li><a href="../MEating/registro.php">Registrarse</a></li>
             
           </ul>
         </div><!--/.nav-collapse -->
@@ -73,7 +73,7 @@
 </div>
 
 <div> <button type="button" class="btn btn-default">Olvide mi contraseña</button>
- <button type="button" class="btn btn-default">Registrarme</button></div>
+ <a href="../MEating/registro.php" class="btn btn-default" role="button">Registrarme</a></div>
 </div>
 
     </div>
@@ -91,9 +91,9 @@
             <div class="wrapped" align="center"> <!Anclamos un footer abajo del todo de la pagina>
                 <p class="pull-right"><a id="goTop" href="#"><h3> ^ </h3></a></p> <!con ese icono nos lleva hacia arriba de la pagina>
                 <p>© 2014 MEating   ·  <a href="ruta de privacidad y terminos">Privacidad y Términos</a> · Seguinos en <!no va a llevar a los links mencionados abajo a traves de los iconos-imagenes>
-                	<a href="http://facebook.com"><img src="img/f2.png" height='30' width='70'></a>, 
-					<a href="http://twitter.com"><img src="img/t1.png" height='30' width='70'></a> y 
-					<a href="http://plus.google.com/share"><img src="img/g1.png" height='30' width='70'></a>.
+                	<a href="http://facebook.com"><img src="img/f2.png" height='30' width='70'></a> | 
+					<a href="http://twitter.com"><img src="img/t1.png" height='30' width='70'></a> | 
+					<a href="http://plus.google.com/share"><img src="img/g1.png" height='30' width='70'></a>
 					
                 </p>
             </div>
