@@ -57,11 +57,9 @@
     <div class="container"> 
     	<div class="well"> 
 	        <div><h1 id="type"> Mis Eventos</h1></div>
-            <div align="right"><a href="Evento.php" class="btn btn-primary" >Agregar Evento +</a></div><br>
-		
+            <div align="right"><a href="Evento.php" class="btn btn-primary" >Agregar Evento +</a></div><br>		
 
 <?php	
-	
 		$conexion= mysql_connect("localhost","root","") or die ("no se puede conectar con la base de datos");
 	
 		//Selecciono la base de datos
