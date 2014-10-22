@@ -10,7 +10,6 @@ $(document).ready(function(){
 										  'ciudad':"required", 
 										  'consulta':"required", 
 										  'check':"required", 
-										  '#btnCancelar':"reset"
 									  },
 							messages: {
 										   'nombre': "Por favor indica tu nombre",

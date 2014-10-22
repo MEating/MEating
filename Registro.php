@@ -10,13 +10,6 @@
     <title>Registrarse</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css/StyleComun.css" rel="stylesheet">
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
 </head>
 <body>
     <!--barra de menu-->
@@ -27,9 +20,9 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="../MEating/index.html">Inicio</a></li>
+            <li><a href="index.html">Inicio</a></li>
             <li><a href="#about">¿Que es Meating?</a></li>
-            <li><a href="../MEating/Quienes Somos.html">¿Quienes somos?</a></li>            
+            <li><a href="MEating/Quienes Somos.html">¿Quienes somos?</a></li>            
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="../MEating/login.php">Inicio de Sesion</a></li>
@@ -41,16 +34,6 @@
     <!--le da el cuerpo al body (valga la redundancia)--> <!--modificado en el css box-shadow-->
     <div class="container" > 
     	<div class="well">
-       	<!--Formulario-->
-           <!--<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="" method="post" >
-             <fieldset>
-               <legend>Registro</legend>
-                <!--Nombre-->
-              <!--  <div class="form-group">
-                  <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
-                  <div class="col-lg-5">
-                    <input class="form-control" id="inputNombre" placeholder="Nombre de usuario" type="text" name="nombre">-->
-        	<!--Formulario-->
 			<form class="form-horizontal" placeholder=".col-xs-3" id="contacto" action="MisEventos.php" method="post" >
               <fieldset>
                   <legend>Registro</legend>
@@ -113,30 +96,30 @@
                     <label for="selectProvincia" class="col-lg-2 control-label">Provincia</label>
                     <div class="col-lg-5">
                         <select class="form-control" id="selectProvincia" name="provincias">
-                            <option>Buenos Aires</option>
-                            <option>Catamarca</option>
-                            <option>Chaco</option>
-                            <option>Chubut</option>
-                            <option>Córdoba</option>
-                            <option>Corrientes</option>
-                            <option>Distrito Federal</option>
-                            <option>Entre Ríos</option>
-                            <option>Formosa</option>
-                            <option>Jujuy</option>
-                            <option>La Pampa</option>
-                            <option>La Rioja</option>
-                            <option>Mendoza</option>
-                            <option>Misiones</option>
-                            <option>Neuquén</option>
-                            <option>Río Negro</option>
-                            <option>Salta</option>
-                            <option>San Juan</option>
-                            <option>San Luis</option>
-                            <option>Santa Cruz</option>
-                            <option>Santa Fe</option>
-                            <option>Santiago del Estero</option>
-                            <option>Tierra del Fuego</option>
-                            <option>Tucumán</option>
+                            <option value="Buenos Aires">Buenos Aires</option>
+                            <option value="Capital Federa">Capital Federal</option>
+                            <option value="Catamarca">Catamarca</option>
+                            <option value="Chaco">Chaco</option>
+                            <option value="Chubut">Chubut</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Corrientes">Corrientes</option>                            
+                            <option value="Entre Ríos">Entre Ríos</option>
+                            <option value="Formosa">Formosa</option>
+                            <option value="Jujuy">Jujuy</option>
+                            <option value="La Pampa">La Pampa</option>
+                            <option value="La Rioja">La Rioja</option>
+                            <option value="Mendoza">Mendoza</option>
+                            <option value="Misiones">Misiones</option>
+                            <option value="Neuquén">Neuquén</option>
+                            <option value="Río Negro">Río Negro</option>
+                            <option value="Salta">Salta</option>
+                            <option value="San Juan">San Juan</option>
+                            <option value="San Luis">San Luis</option>
+                            <option value="Santa Cruz">Santa Cruz</option>
+                            <option value="Santa Fe">Santa Fe</option>
+                            <option value="Santiago del Estero">Santiago del Estero</option>
+                            <option value="Tierra del Fuego">Tierra del Fuego</option>
+                            <option value="Tucumán">Tucumán</option>
                        </select>
                     </div>     
                 </div>
@@ -152,14 +135,8 @@
                     <label for="textArea" class="col-lg-2 control-label">Terminos y Condiciones </br></label>
                     <div class="col-lg-5">
                       <textarea class="form-control " rows="5" id="textArea" disabled="disabled">TERMINOS Y CONDICIONES
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
-                          Terminos y Condiciones </br>
+La utilización de nuestro sitio implica su aceptación plena y sinreservas a todas y cada una de las disposiciones incluidas en este Aviso Legal, por lo que si usted no está de acuerdo con cualquiera de las condiciones aquí establecidas, no deberá usar u/o acceder a este sitio.
+ Reservamos el derecho a modificar esta Declaración de Privacidad en cualquier momento. Su uso continuo de cualquier porción de este sitio tras la notificación o anuncio de tales modificaciones constituirá su aceptación de tales cambios
                       </textarea>             
                     </div>
                </div>
@@ -170,11 +147,10 @@
                       <input type="checkbox" name="check" id="condiciones">Acepto Términos y Condiciones</div>
                   </label>
                </div>
-               <!--Botones-->
+               <!--Boton-->
                 <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2 f">
                      <button type="submit" class="btn-primary" value="submit" id="btnAceptar" name="acepta">Aceptar</button>
-                     <button class="btn-default" type="reset" value="reset" id="btnCancelar" name="cancelar">Cancelar</button>
                   </div>
                 </div>
             </fieldset>
